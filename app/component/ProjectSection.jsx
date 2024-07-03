@@ -31,6 +31,7 @@ const ProjectSection = () => {
         {projectTagsArray.map((project) => {
           return (
             <ProjectTags
+              key={project.id}
               name={project.name}
               onClick={handleTags}
               isSelected={tag === project.selected}
