@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
@@ -20,9 +21,9 @@ const HeroSection = () => {
             <br />
             <TypeAnimation
               sequence={[
-                "Freedom",
+                "Freedom Chisom",
                 1000, // Timers
-                "FRONTEND Developer",
+                "FULLSTACK Developer",
                 1000,
               ]}
               wrapper="span"
@@ -38,9 +39,12 @@ const HeroSection = () => {
             tenetur, tempore esse?
           </p>
           <div>
-            <button className="w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
+            <AnchorLink
+              href="#contact"
+              className="w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+            >
               Hire Me
-            </button>
+            </AnchorLink>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 border bg-transparent hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV

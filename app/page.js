@@ -1,5 +1,5 @@
 import AboutSection from "./component/AboutSection";
-import Archieve from "./component/Archieve";
+// import Archieve from "./component/Archieve";
 import EmailSection from "./component/EmailSection";
 import Footer from "./component/Footer";
 import HeroSection from "./component/HeroSection";
@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar/>
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
-        <Archieve />
+        {/* <Archieve /> */}
         <AboutSection />
         <ProjectSection />
         <EmailSection />

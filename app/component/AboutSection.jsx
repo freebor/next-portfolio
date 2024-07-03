@@ -63,7 +63,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I&apos;m a skilled FRONTEND developer with skills and experience in
+            I&apos;m a skilled FULLSTACK Developer with skills and experience in
             HTML, CSS, Typescript, Javascript, and expertise in frameworks like
             React, Next.js, Node.js. I&apos;m a quick learner and I collaborate
             closely with clients to create efficient, scalable, and
