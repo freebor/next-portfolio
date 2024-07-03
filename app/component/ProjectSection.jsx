@@ -4,63 +4,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTags from "./ProjectTags";
 import { motion, useInView } from "framer-motion";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "project 1 description",
-    image: "/images/project/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "project 2 description",
-    image: "/images/project/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "project 3 description",
-    image: "/images/project/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "project 4 description",
-    image: "/images/project/4.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description: "project 5 description",
-    image: "/images/project/5.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description: "project 6 description",
-    image: "/images/project/6.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+import { projectTagsArray, projectsData } from "../util/mockdata";
 
 const ProjectSection = () => {
   const ref = useRef(null);
@@ -84,21 +28,15 @@ const ProjectSection = () => {
         My Project
       </h1>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTags
-          name="All"
-          onClick={handleTags}
-          isSelected={tag === "All"}
-        />
-        <ProjectTags
-          name="Web"
-          onClick={handleTags}
-          isSelected={tag === "Web"}
-        />
-        <ProjectTags
-          name="Mobile"
-          onClick={handleTags}
-          isSelected={tag === "Mobile"}
-        />
+        {projectTagsArray.map((project) => {
+          return (
+            <ProjectTags
+              name={project.name}
+              onClick={handleTags}
+              isSelected={tag === project.selected}
+            />
+          );
+        })}
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filterProject.map((project, index) => (
