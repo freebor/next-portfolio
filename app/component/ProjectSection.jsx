@@ -24,10 +24,10 @@ const ProjectSection = () => {
   };
   return (
     <section id="projects">
-      <h1 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h1 className="text-center text-4xl font-bold  mt-4 mb-8 md:mb-12">
         My Project
       </h1>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className=" flex flex-row justify-center items-center gap-2 py-6">
         {projectTagsArray.map((project) => {
           return (
             <ProjectTags
@@ -39,7 +39,10 @@ const ProjectSection = () => {
           );
         })}
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-12"
+      >
         {filterProject.map((project, index) => (
           <motion.li
             variants={cardVarients}

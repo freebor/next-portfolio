@@ -5,6 +5,9 @@ import gitHubIcons from "../../public/images/github-icon.svg";
 import LinkedinIcon from "../../public/images/linkedin-icon.svg";
 import { useForm, ValidationError } from "@formspree/react";
 import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
+import { PiGithubLogoFill } from "react-icons/pi";
+import { FaLinkedinIn } from "react-icons/fa6";
 import Image from "next/image";
 
 const EmailSection = () => {
@@ -34,23 +37,23 @@ const EmailSection = () => {
       className="grid md:grid-cols-2 my-12 py-24 gap-4 relative"
       id="contact"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] bg-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg top-3/4 absolute -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] bg-primary to-transparent rounded-full h-80 w-80 z-0 blur-lg top-3/4 absolute -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s connect
-        </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <h5 className="text-xl font-bold  my-2">Let&apos;s connect</h5>
+        <p className="text-Gray mb-4 max-w-md">
           I&apos;m currently looking for new opportunities, my inbox is always
           open. whether you have a question or just want to say hi, i&apos;ll
           try my best to get back to you!
         </p>
-        <div className="social flex flex-row gap-2">
+        <div className="social flex flex-row gap-3">
           <button
+            className="bg-bgGithub rounded-full h-fit w-fit"
             onClick={() => window.open("https://github.com/freebor", "_blank")}
           >
-            <Image src={gitHubIcons} alt="gitHub-icon" />
+            <PiGithubLogoFill className="text-[2.5rem] p-1 text-Github" />
           </button>
           <button
+            className=" bg-bgLinkedIn p-1 h-fit w-fit"
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/chisomnwanoruo/",
@@ -59,7 +62,7 @@ const EmailSection = () => {
             }
             href="linkedin.com"
           >
-            <Image src={LinkedinIcon} alt="linkedin-icon" />
+            <FaLinkedinIn className="text-[2.2rem] text-LinkedIn" />
           </button>
         </div>
       </div>
@@ -72,10 +75,7 @@ const EmailSection = () => {
           method="post"
         >
           <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="text-white block font-medium text-sm mb-2"
-            >
+            <label htmlFor="email" className=" block font-medium text-sm mb-2">
               Your email
             </label>
             <input
@@ -84,7 +84,7 @@ const EmailSection = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="border bg-[#18191E] border-[#333F3F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               required
               placeholder="peter@gmail.com"
             />
@@ -92,7 +92,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white block font-medium text-sm mb-2"
+              className=" block font-medium text-sm mb-2"
             >
               Subject
             </label>
@@ -102,7 +102,7 @@ const EmailSection = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border bg-[#18191E] border-[#333F3F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               required
               placeholder="Just saying hi!"
             />
@@ -110,7 +110,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white block font-medium text-sm mb-2"
+              className=" block font-medium text-sm mb-2"
             >
               Message
             </label>
@@ -119,14 +119,14 @@ const EmailSection = () => {
               value={form.message}
               onChange={handleChange}
               id="message"
-              className="border bg-[#18191E] border-[#333F3F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               placeholder="Hey, I'm looking for new opportunities!"
             />
           </div>
           <button
             type="submit"
             disabled={state.submitting}
-            className={`bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full ${
+            className={`bg-primary hover:bg-primary  font-medium py-2.5 px-5 rounded-lg w-full ${
               loading ? "sending-animation" : ""
             }`}
           >

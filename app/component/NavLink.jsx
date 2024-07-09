@@ -6,7 +6,7 @@ const NavLink = ({ href, title }) => {
     <div>
       <AnchorLink
         href={href}
-        className="py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:"
+        className="py-2 pl-3 pr-4 text-Gray2 font-medium sm:text-xl rounded md:p-0 hover:"
       >
         {title}
       </AnchorLink>

@@ -40,13 +40,13 @@ const Archieve = () => {
               key={index}
               className="flex flex-col gap-2 items-center justify-center mx-4"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
+              <h2 className=" text-4xl font-bold flex flex-row">
                 {achievement.prefix}
                 <AnimateNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white text-4xl font-bold"
+                  className=" text-4xl font-bold"
                   configs={(_, index) => {
                     return {
                       mass: 1,
@@ -57,7 +57,7 @@ const Archieve = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base ">{achievement.metrix}</p>
+              <p className="text-Gray text-base ">{achievement.metrix}</p>
             </div>
           );
         })}

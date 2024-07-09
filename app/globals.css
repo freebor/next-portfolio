@@ -2,12 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root, .light {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-light: #3b82f6;
+  --bg-100: #efefef;
+  --secondary-light: #9fa9f7;
+  --text-light: #000000;
+  --text-gray: #555b5f;
+  --text-gray-2: #a6aaac;
+  --bg-dark: #d4ddf5;
+  --linkedIn: #ffffff;
+  --bg-linkedIn: #0077b5;
+  --github: #fff;
+  --bg-github: #2b3137;
 }
 
+.dark {
+  --bg-100: #121212;
+  --primary-light: #a855f7;
+  --secondary-light: #ec4899;
+  --text-light: #ffffff;
+  --text-gray: #ADB7BE;
+  --text-gray-2: #eaeced;
+  --bg-dark: #181818;
+  --bg-linkedIn: #fff;
+  --linkedIn: #0077b5;
+  --github: #2b3137;
+  --bg-github: #fff;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,13 +41,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-light);
 }
 
 @layer utilities {

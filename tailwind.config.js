@@ -2,6 +2,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  darkMode : "selector",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,8 +18,17 @@ module.exports = {
     },
     colors:{
       ...colors,
-      primary: colors.purple,
-      secondary: colors.pink,
+      primary: "var(--primary-light)", //purple color
+      secondary: "var(--secondary-light)", //pink color
+      Gray: "var(--text-gray)",
+      Gray2: "var(--text-gray-2)",
+      background: "var(--bg-100)",
+      bgDark: "var(--bg-dark)",
+      txtDark: "var(--text-light)",
+      bgLinkedIn: "var(--bg-linkedIn)",
+      LinkedIn: "var(--linkedIn)",
+      bgGithub: "var(--bg-github)",
+      Github: "var(--github)",
     }
   },
   plugins: [],

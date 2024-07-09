@@ -6,16 +6,16 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section className="xl:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12 lg:gap-10">
+    <section className="xl:py-16 py-10">
+      <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 lg:gap-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center md:text-left text-center"
+          className="col-span-8 place-self-center md:text-left space-y-8 text-center"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
+          <h1 className=" mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Hello, I&apos;m{" "}
             </span>
             <br />
@@ -32,21 +32,24 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            aspernatur ullam accusamus harum praesentium adipisci quod fugiat
-            quisquam illum quae laudantium rerum nostrum aut unde ex consequatur
-            tenetur, tempore esse?
+          <p className="text-Gray font-medium text-base sm:text-lg lg:text-xl">
+            I am Chisom Freedom Nwanoruo, a dedicated fullstack developer with
+            expertise in HTML, CSS, JavaScript, React, Next.js, and Node.js.
+            With a strong foundation in both front-end and back-end
+            technologies, I excel at creating dynamic and responsive web
+            applications. My passion for coding and problem-solving drives me to
+            continuously learn and innovate, delivering high-quality solutions
+            that meet user needs and business goals.
           </p>
-          <div>
+          <div className="space-y-6 xl:text-left text-center">
             <AnchorLink
               href="#contact"
-              className="w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              className="w-full sm:w-fit px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary to-secondary hover:bg-slate-200 "
             >
               Hire Me
             </AnchorLink>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 border bg-transparent hover:bg-slate-800 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-primary to-secondary border bg-transparent hover:bg-slate-800  mt-3">
+              <span className="block bg-bgDark hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
             </button>
@@ -56,9 +59,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-12 lg:col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-bgDark w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/devMan.png"
               alt="alt image"
