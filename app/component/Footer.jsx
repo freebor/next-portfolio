@@ -28,9 +28,6 @@ const Footer = ({ isDarkMode, toggleMode }) => {
             >
               {isDarkMode ? "Dark Mode" : "Light Mode"}
             </span>
-            {/* <span className="font-semibold hidden md:block">
-              {isDarkMode ? "Dark Mode" : "Light Mode"}
-            </span> */}
             <span className="hidden md:block">
               <ToggleSwitch toggle={toggleMode} isDarkMode={isDarkMode} />
             </span>
