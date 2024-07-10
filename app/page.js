@@ -1,4 +1,3 @@
-// app/page.js
 "use client";
 
 import { useEffect, useState } from "react";
@@ -19,7 +18,7 @@ export default function Home() {
   }, []);
 
   if (!hydrated) {
-    return null; // or a loading spinner
+    return null; 
   }
 
   return (
