@@ -27,7 +27,7 @@ const useDarkMode =()=>{
         bodyClass.toggle("dark", isDarkMode);
         if(process.isClient){
             localStorage.setItem("darkMode", isDarkMode ? "dark" : "light");
-        }
+        }else{}
     },[isDarkMode])
     return {isDarkMode, toggleMode};
 }

@@ -1,8 +1,8 @@
-"use client"
+// app/page.js
+"use client";
 
 import { useEffect, useState } from "react";
 import AboutSection from "./component/AboutSection";
-// import Archieve from "./component/Archieve";
 import EmailSection from "./component/EmailSection";
 import Footer from "./component/Footer";
 import HeroSection from "./component/HeroSection";
@@ -11,18 +11,26 @@ import ProjectSection from "./component/ProjectSection";
 import useDarkMode from "./hooks/darkMode";
 
 export default function Home() {
+  const { isDarkMode, toggleMode } = useDarkMode();
+  const [hydrated, setHydrated] = useState(false);
 
-  const {isDarkMode, toggleMode} = useDarkMode()
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    return null; // or a loading spinner
+  }
+
   return (
-    <main className="flex min-h-screen flex-col">
-      <Navbar/>
+    <main className={`flex min-h-screen flex-col ${isDarkMode ? 'dark' : ''}`}>
+      <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
-        {/* <Archieve /> */}
         <AboutSection />
         <ProjectSection />
         <EmailSection />
-      </div>  
+      </div>
       <Footer isDarkMode={isDarkMode} toggleMode={toggleMode} />
     </main>
   );
