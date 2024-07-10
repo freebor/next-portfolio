@@ -21,17 +21,20 @@ const Footer = ({ isDarkMode, toggleMode }) => {
         </span>
         <p className="text-slate-600">All right reserved.</p>
         <div className="flex">
-          <button className="flex gap-2" onClick={toggleMode}>
-            <span className="font-semibold block md:hidden bg-primary p-2 rounded-md">
+          <div className="flex gap-2">
+            <span
+              onClick={toggleMode}
+              className="font-semibold max-md:bg-primary max-md:p-2 max-md:rounded-md"
+            >
               {isDarkMode ? "Dark Mode" : "Light Mode"}
             </span>
-            <span className="font-semibold hidden md:block">
+            {/* <span className="font-semibold hidden md:block">
               {isDarkMode ? "Dark Mode" : "Light Mode"}
-            </span>
+            </span> */}
             <span className="hidden md:block">
               <ToggleSwitch toggle={toggleMode} isDarkMode={isDarkMode} />
             </span>
-          </button>
+          </div>
         </div>
       </div>
     </footer>

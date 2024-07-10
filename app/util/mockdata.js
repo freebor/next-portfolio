@@ -1,7 +1,7 @@
 export const projectTagsArray = [
-    {name: "All", selected: "All"},
-    {name: "React", selected: "React"},
-    {name: "HTML", selected: "HTML"},
+    {id: 1, name: "All", selected: "All"},
+    {id: 2, name: "React", selected: "React"},
+    {id: 3, name: "HTML", selected: "HTML"},
 ]
 
 export const projectsData = [
