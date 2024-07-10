@@ -29,6 +29,7 @@ module.exports = {
       LinkedIn: "var(--linkedIn)",
       bgGithub: "var(--bg-github)",
       Github: "var(--github)",
+      Input: "var(--input)",
     }
   },
   plugins: [],

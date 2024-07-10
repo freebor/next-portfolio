@@ -12,7 +12,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center md:text-left space-y-8 text-center"
+          className="col-span-12 md:col-span-8 place-self-center md:text-left space-y-8 text-center"
         >
           <h1 className=" mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">

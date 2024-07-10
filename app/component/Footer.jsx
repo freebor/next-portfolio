@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import ToggleSwitch from "./ToggleSwitch";
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 const Footer = ({ isDarkMode, toggleMode }) => {
   return (
@@ -24,11 +26,14 @@ const Footer = ({ isDarkMode, toggleMode }) => {
           <div className="flex gap-2">
             <span
               onClick={toggleMode}
-              className="font-semibold max-md:bg-primary max-md:p-2 max-md:rounded-md"
+              className="font-semibold hidden md:block"
             >
               {isDarkMode ? "Dark Mode" : "Light Mode"}
             </span>
-            <span className="hidden md:block">
+            <span className="font-semibold h-fit bg-primary p-[0.25rem] mr-1 rounded text-[1rem] md:hidden">
+              {isDarkMode ? <MdDarkMode /> : <CiLight />}
+            </span>
+            <span className="">
               <ToggleSwitch toggle={toggleMode} isDarkMode={isDarkMode} />
             </span>
           </div>

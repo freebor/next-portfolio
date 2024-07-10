@@ -84,7 +84,7 @@ const EmailSection = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-Input placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               required
               placeholder="peter@gmail.com"
             />
@@ -102,7 +102,7 @@ const EmailSection = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-Input placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               required
               placeholder="Just saying hi!"
             />
@@ -119,14 +119,14 @@ const EmailSection = () => {
               value={form.message}
               onChange={handleChange}
               id="message"
-              className="border bg-bgDark border-[#333F3F] placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
+              className="border bg-bgDark border-Input placeholder-[#9CA2A9] text-txtDark font-semibold text-sm rounded-lg block w-full p-2.5"
               placeholder="Hey, I'm looking for new opportunities!"
             />
           </div>
           <button
             type="submit"
             disabled={state.submitting}
-            className={`bg-primary hover:bg-primary  font-medium py-2.5 px-5 rounded-lg w-full ${
+            className={`bg-primary hover:bg-primary border-2 font-medium py-2.5 px-5 rounded-lg w-full ${
               loading ? "sending-animation" : ""
             }`}
           >

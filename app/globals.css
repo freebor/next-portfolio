@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --primary-light: #3b82f6;
   --bg-100: #efefef;
+  --input: #9fa9f7;
   --secondary-light: #9fa9f7;
   --text-light: #000000;
   --text-gray: #555b5f;
@@ -20,6 +21,7 @@
 }
 
 .dark {
+  --input: #eaeced;
   --bg-100: #121212;
   --primary-light: #a855f7;
   --secondary-light: #ec4899;
