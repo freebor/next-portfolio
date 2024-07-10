@@ -5,8 +5,6 @@ import { Switch } from "@headlessui/react";
 import { classNames } from "../util/function";
 
 const ToggleSwitch = ({ toggle, isDarkMode }) => {
-  // const [enabled, setEnabled] = useState(false);
-
   return (
     <div>
       <Switch
