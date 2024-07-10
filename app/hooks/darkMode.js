@@ -4,9 +4,10 @@ const { useState, useEffect } = require("react");
 
 const useDarkMode =()=>{
     const [isDarkMode, setIsDarkMode] = useState(()=>{
-        
-        const savedMode = typeof(localStorage) !== undefined ? 
-            localStorage.getItem("darkMode") : "dark";
+
+        const savedMode = process.isClient
+            ? localStorage.getItem("darkMode")
+            : "dark";
 
         const prefersDarkMode = savedMode === "dark"
         if(savedMode){
@@ -24,7 +25,9 @@ const useDarkMode =()=>{
     useEffect(()=>{
         const bodyClass = document.body.classList
         bodyClass.toggle("dark", isDarkMode);
-        localStorage.setItem("darkMode", isDarkMode ? "dark" : "light");
+        if(process.isClient){
+            localStorage.setItem("darkMode", isDarkMode ? "dark" : "light");
+        }
     },[isDarkMode])
     return {isDarkMode, toggleMode};
 }
